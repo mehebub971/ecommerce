@@ -38,7 +38,7 @@ public class CategoryController {
         );
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<CategoryResponse> create(
             @Valid @RequestBody CategoryCreateRequest request) {
 
