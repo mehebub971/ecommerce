@@ -1,8 +1,8 @@
 package com.mehebub.ecommerce.controller;
 
-import com.mehebub.ecommerce.dto.category.CategoryCreateRequest;
-import com.mehebub.ecommerce.dto.category.CategoryResponse;
-import com.mehebub.ecommerce.dto.category.CategoryUpdateRequest;
+import com.mehebub.ecommerce.dto.CategoryCreateRequest;
+import com.mehebub.ecommerce.dto.CategoryResponse;
+import com.mehebub.ecommerce.dto.CategoryUpdateRequest;
 import com.mehebub.ecommerce.service.CategoryService;
 
 import jakarta.validation.Valid;

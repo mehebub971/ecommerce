@@ -1,4 +1,4 @@
-package com.mehebub.ecommerce.dto.category;
+package com.mehebub.ecommerce.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

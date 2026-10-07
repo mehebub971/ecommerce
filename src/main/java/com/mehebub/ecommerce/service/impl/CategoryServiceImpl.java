@@ -1,8 +1,8 @@
 package com.mehebub.ecommerce.service.impl;
 
-import com.mehebub.ecommerce.dto.category.CategoryCreateRequest;
-import com.mehebub.ecommerce.dto.category.CategoryResponse;
-import com.mehebub.ecommerce.dto.category.CategoryUpdateRequest;
+import com.mehebub.ecommerce.dto.CategoryCreateRequest;
+import com.mehebub.ecommerce.dto.CategoryResponse;
+import com.mehebub.ecommerce.dto.CategoryUpdateRequest;
 import com.mehebub.ecommerce.entity.Category;
 import com.mehebub.ecommerce.exception.DuplicateResourceException;
 import com.mehebub.ecommerce.exception.ResourceNotFoundException;
