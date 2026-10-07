@@ -15,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -49,11 +50,25 @@ public class CategoryServiceImpl implements CategoryService {
         Category category =
                 categoryMapper.toEntity(request);
 
-        // 3. Save entity
+        // 3. Save category first
         Category savedCategory =
                 categoryRepository.save(category);
 
-        // 4. Convert Entity → Response DTO
+        // 4. Generate category code
+        String categoryCode = String.format(
+                "CGI%d%04d",
+                LocalDateTime.now().getYear(),
+                savedCategory.getId()
+        );
+
+        // 5. Set category code
+        savedCategory.setCategoryCode(categoryCode);
+
+        // 6. Save again
+        savedCategory =
+                categoryRepository.save(savedCategory);
+
+        // 7. Return response
         return categoryMapper.toResponse(savedCategory);
     }
 
