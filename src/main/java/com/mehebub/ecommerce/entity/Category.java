@@ -11,6 +11,10 @@ import java.time.LocalDateTime;
                 @UniqueConstraint(
                         name = "uk_category_name",
                         columnNames = "name"
+                ),
+                @UniqueConstraint(
+                        name = "uk_category_code",
+                        columnNames = "category_code"
                 )
         }
 )
@@ -25,6 +29,9 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "category_code",  unique = true, length = 20)
+    private String categoryCode;
+
     @Column(nullable = false, unique = true, length = 100)
     private String name;
 
@@ -36,5 +43,17 @@ public class Category {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-    
+
+
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
 }
