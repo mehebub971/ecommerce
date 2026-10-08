@@ -29,6 +29,7 @@ public class CategoryMapper {
 
         return new CategoryResponse(
                 category.getId(),
+                category.getCategoryCode(),
                 category.getName(),
                 category.getDescription(),
                 category.getCreatedAt(),

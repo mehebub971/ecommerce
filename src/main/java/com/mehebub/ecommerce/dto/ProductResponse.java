@@ -1,25 +1,30 @@
 package com.mehebub.ecommerce.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CategoryResponse {
+public class ProductResponse {
 
     private Long id;
 
-    private String categoryCode;
+    private String productCode;
 
     private String name;
 
     private String description;
+
+    private BigDecimal price;
+
+    private Integer stock;
+
+    private String categoryCode;
 
     private LocalDateTime createdAt;
 
