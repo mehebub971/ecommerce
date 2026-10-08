@@ -1,0 +1,502 @@
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-page {
+    width: 100%;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.stat-card {
+    min-height: 115px;
+
+    background: #ffffff;
+
+    border: 1px solid #f0f0f0;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.stat-content {
+    min-width: 0;
+}
+
+.stat-label {
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    color: #8b8f98;
+
+    margin-bottom: 8px;
+}
+
+.stat-card h2 {
+    margin: 0 0 8px;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    color: #171923;
+
+    font-weight: 700;
+}
+
+.stat-growth {
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.stat-growth span {
+    color: #999da5;
+
+    margin-left: 8px;
+
+    font-weight: 400;
+}
+
+.stat-growth.positive {
+    color: #10b981;
+}
+
+.stat-growth.negative {
+    color: #ef4444;
+}
+
+
+/* =========================
+   STAT ICON
+========================= */
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+.stat-icon.red {
+    background: #ef4444;
+}
+
+.stat-icon.green {
+    background: #10b981;
+}
+
+.stat-icon.orange {
+    background: #f59e0b;
+}
+
+.stat-icon.purple {
+    background: #6366f1;
+}
+
+
+/* =========================
+   TASK PROGRESS
+========================= */
+
+.progress-bar {
+    width: 130px;
+
+    height: 5px;
+
+    background: #e5e7ff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-bar div {
+    width: 75.5%;
+
+    height: 100%;
+
+    background: #6366f1;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   CHARTS
+========================= */
+
+.dashboard-charts {
+    display: grid;
+
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+
+    gap: 18px;
+}
+
+.chart-card {
+    background: #ffffff;
+
+    border: 1px solid #f0f0f0;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================
+   CHART HEADER
+========================= */
+
+.chart-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.chart-card h3 {
+    margin: 0;
+
+    color: #171923;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.sync-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #555b65;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   SALES CHART
+========================= */
+
+.sales-chart {
+    height: 270px;
+
+    display: flex;
+
+    position: relative;
+}
+
+.chart-y-axis {
+    width: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding-bottom: 28px;
+
+    box-sizing: border-box;
+}
+
+.chart-y-axis span {
+    font-size: 8px;
+
+    color: #9ca3af;
+
+    text-align: right;
+}
+
+
+/* =========================
+   CHART AREA
+========================= */
+
+.chart-area {
+    flex: 1;
+
+    position: relative;
+
+    margin-left: 10px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.chart-grid {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.chart-grid span {
+    width: 100%;
+
+    border-top: 1px dashed #eeeeee;
+}
+
+
+/* =========================
+   BARS
+========================= */
+
+.bars {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: calc(100% - 5px);
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+}
+
+.bar-group {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    position: relative;
+
+    flex: 1;
+}
+
+.bars-wrapper {
+    height: 220px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 3px;
+}
+
+.bar {
+    width: 6px;
+
+    min-height: 2px;
+
+    border-radius: 2px 2px 0 0;
+}
+
+.bar-primary {
+    background: #6366f1;
+}
+
+.bar-secondary {
+    background: #c7c9f7;
+}
+
+.month {
+    position: absolute;
+
+    bottom: -22px;
+
+    font-size: 8px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================
+   TRAFFIC
+========================= */
+
+.traffic-card {
+    min-height: 350px;
+}
+
+.traffic-card > h3 {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   DONUT
+========================= */
+
+.donut-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 25px 0 15px;
+}
+
+.donut-chart {
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background:
+            conic-gradient(
+                    #6366f1 0deg 227deg,
+                    #10b981 227deg 281deg,
+                    #f59e0b 281deg 360deg
+            );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-center {
+    width: 105px;
+    height: 105px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   TRAFFIC ITEMS
+========================= */
+
+.traffic-items {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-top: 10px;
+}
+
+.traffic-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+.traffic-icon {
+    font-size: 16px;
+
+    margin-bottom: 3px;
+}
+
+.traffic-item strong {
+    font-size: 11px;
+
+    color: #252832;
+}
+
+.traffic-item span {
+    font-size: 10px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-charts {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .products-page {
+        overflow-x: hidden;
+    }
+
+    .stat-card {
+        min-height: 105px;
+    }
+}
