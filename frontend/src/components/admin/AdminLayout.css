@@ -1,0 +1,186 @@
+/* =========================
+   ADMIN LAYOUT
+========================= */
+
+.admin-layout {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.admin-main {
+    margin-left: 250px;
+    padding-top: 80px;
+
+    width: calc(100% - 250px);
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    border: none;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.admin-layout {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.admin-main,
+.admin-content,
+.admin-footer {
+    border-right: none !important;
+}
+.admin-header {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.admin-header h1 {
+    margin: 20px 0 10px;
+}
+
+.admin-header p {
+    color: #6b6375;
+}
+
+.admin-content {
+    flex: 1;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+/* =========================
+   NAVBAR
+========================= */
+
+.admin-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 60px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    z-index: 1000;
+}
+
+.admin-navbar-left h2 {
+    margin: 0;
+}
+
+.admin-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.admin-sidebar {
+    position: fixed;
+
+    top: 60px;
+    left: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    background: #111827;
+    color: white;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    z-index: 999;
+}
+
+.sidebar-title {
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-menu a,
+.sidebar-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    display: block;
+}
+
+.sidebar-menu a:hover,
+.sidebar-bottom a:hover {
+    background: #2563eb;
+}
+
+.sidebar-bottom {
+    margin-top: 30px;
+}
+
+.sidebar-logout {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #dc2626;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+.admin-footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px 30px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #6b7280;
+    font-size: 14px;
+
+    box-sizing: border-box;
+}
