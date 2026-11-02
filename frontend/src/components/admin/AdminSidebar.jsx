@@ -22,6 +22,14 @@ function AdminSidebar() {
                     🗂️ Categories
                 </a>
 
+                <a href="/admin/navbar">
+                    🧭 Navbar
+                </a>
+
+                <a href="/admin/sub-navbar">
+                    ↳ Sub Navbar
+                </a>
+
                 <a href="/admin/orders">
                     🛒 Orders
                 </a>
